@@ -48,12 +48,7 @@ def solve(input_str: str):
         n_index += 1
 
       result += int( ''.join(number))
-      print(number)
-      print(result)
-
-
-
-
+      
   return result
 
 

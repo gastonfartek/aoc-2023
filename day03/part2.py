@@ -52,10 +52,6 @@ def solve(input_str: str):
     
     if len(numbers) == 2:
       result += numbers[0] * numbers[1]
-      
-
-
-
 
   return result
 
