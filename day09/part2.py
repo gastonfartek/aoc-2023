@@ -9,14 +9,10 @@ def solve(input_str: str):
             
             current = nums[-1]
             length = len(current)
-            new_sequence = deque()
-
-            for i in range(length - 1):
-                new_sequence.append(current[i+1] - current[i])
-
+            new_sequence = deque(current[i+1] - current[i] for i in range(length - 1))
             nums.append(new_sequence)
 
-            if len(list(filter(lambda x: x != 0, nums[-1]))) == 0:
+            if all(n == 0 for n in nums[-1]):
                 break
             
         nums[-1].appendleft(0)
